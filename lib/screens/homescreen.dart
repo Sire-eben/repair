@@ -16,9 +16,12 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           iconTheme: const IconThemeData(color: AppColors.primaryBlack),
-          leading: Image.asset(
-            "assets/icons/menu.png",
-            height: 12,
+          leading: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: Image.asset(
+              "assets/icons/menu.png",
+              height: 12,
+            ),
           ),
           backgroundColor: Colors.transparent,
           elevation: 0,

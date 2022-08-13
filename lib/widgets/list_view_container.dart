@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:repair/style/styles.dart';
 
 Widget listViewContainer(
   String topContainerText,
@@ -10,14 +9,8 @@ Widget listViewContainer(
   double height,
   double width,
 ) {
-  return Container(
-    height: height * .25,
-    width: width * .6,
-    alignment: Alignment.bottomRight,
-    margin: const EdgeInsets.only(right: 16),
-    decoration: BoxDecoration(
-      borderRadius: BorderRadius.circular(25),
-    ),
+  return Padding(
+    padding: const EdgeInsets.only(right: 18.0),
     child: Column(
       children: [
         //TOP CONTAINER OF LIST
@@ -41,7 +34,6 @@ Widget listViewContainer(
         Container(
           height: height * .175,
           width: width * .6,
-          alignment: Alignment.topLeft,
           decoration: BoxDecoration(
               color: bottomContainerColor,
               borderRadius: const BorderRadius.only(
@@ -51,31 +43,25 @@ Widget listViewContainer(
           child: Stack(
             // alignment: Alignment.bottomRight,
             children: [
+              Positioned(
+                  right: 0,
+                  bottom: 0,
+                  child: Container(
+                    height: 120,
+                    width: 100,
+                    decoration: BoxDecoration(
+                        borderRadius: const BorderRadius.only(
+                            bottomRight: Radius.circular(36)),
+                        image: DecorationImage(image: AssetImage(image))),
+                  )),
               Container(
-                constraints: BoxConstraints(maxWidth: width * .4),
+                constraints: BoxConstraints(maxWidth: width * .35),
                 padding: const EdgeInsets.only(left: 20, top: 20),
                 alignment: Alignment.topLeft,
                 child: Text(
                   bottomContainerText,
                   style: const TextStyle(
                       fontWeight: FontWeight.w600, fontSize: 17),
-                ),
-              ),
-              Positioned(
-                right: 0,
-                bottom: 0,
-                child: Container(
-                  height: 120,
-                  width: 100,
-                  alignment: Alignment.bottomRight,
-                  decoration: BoxDecoration(
-                      borderRadius: const BorderRadius.only(
-                          bottomRight: Radius.circular(30)),
-                      image: DecorationImage(
-                        image: AssetImage(
-                          image,
-                        ),
-                      )),
                 ),
               ),
             ],
