@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:repair/screens/splashscreen.dart';
+import 'package:repair/screens/splash/splashscreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +12,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Flutter Demo',
+        title: 'Repair home Demo',
+        // debugShowMaterialGrid: true,
+        debugShowCheckedModeBanner: false,
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),

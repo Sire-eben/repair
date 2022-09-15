@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:repair/screens/homescreen.dart';
-import 'package:repair/screens/signupscreen.dart';
+import 'package:repair/screens/home_screen/homescreen.dart';
+import 'package:repair/screens/authentication/signupscreen.dart';
 import 'package:repair/style/styles.dart';
 import 'package:repair/widgets/textfield_container.dart';
 
-import '../const/const.dart';
+import '../../const/const.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);

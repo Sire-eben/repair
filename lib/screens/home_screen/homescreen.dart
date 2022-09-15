@@ -134,9 +134,18 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
                 const Gap(16),
-                customListTile(Icons.microwave, "Fix Microwave", "Kitchen"),
+                const CustomListtile(
+                  title: 'Fix Microwave',
+                  subtitle: 'Kitchen',
+                  icon: Icons.microwave,
+                ),
                 const Gap(16),
-                customListTile(Icons.tv, "Fix TV set", "Living Room")
+                // customListTile(context, Icons.tv, "Fix TV set", "Living Room")
+                const CustomListtile(
+                  title: 'Fix Tv Set',
+                  subtitle: 'Living Room',
+                  icon: Icons.tv,
+                )
               ],
             ),
           ),
